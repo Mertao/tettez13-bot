@@ -4,7 +4,6 @@ from aiogram.filters import CommandStart, Text
 from keyboards.keyboards import (main_menu_kb, comp_services_kb,
                                  wildberries_menu_kb, inst_menu_kb)
 from lexicon.lexicon_ru import LEXICON_RU
-# from services.services import ...
 
 
 # инициализируем роутер
