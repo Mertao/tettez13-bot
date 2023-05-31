@@ -1,24 +1,13 @@
 import asyncio
-import logging
 
 from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
 from handlers import user_handlers, other_handlers
 
 
-# инициализируем логгер
-logger = logging.getLogger(__name__)
-
-
 # конфигурируем и запускаем бота
 async def main():
     # конфигурируем логгирование
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(filename)s:%(lineno)d #%(levelname)-8s '
-               '[%(asctime)s] - %(name)s - %(message)s')
-
-    logging.info('Starting bot')
 
     config: Config = load_config()
 
