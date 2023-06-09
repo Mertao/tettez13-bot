@@ -41,7 +41,7 @@ async def process_add_price_answer(message: Message):
 # хэндлер для "Дополнительные услуги"
 @router.message(Text(text=LEXICON_RU['comp_services']))
 async def process_comp_services_answer(message: Message):
-    await message.answer(text=LEXICON_RU['comp_services'],
+    await message.answer(text=LEXICON_RU['comp_services_info'],
                          reply_markup=comp_services_kb)
 
 
@@ -85,7 +85,7 @@ async def process_comp_services_shooting_lb_button_answer(message: Message):
 # хэндлер для "Вайлдберрис"
 @router.message(Text(text=LEXICON_RU['button_wb']))
 async def process_button_wb_answer(message: Message):
-    await message.answer(text=LEXICON_RU['button_wb'],
+    await message.answer(text=LEXICON_RU['button_wb_info'],
                          reply_markup=wildberries_menu_kb)
 
 
@@ -104,7 +104,7 @@ async def process_wildberries_copywriting_button_answer(message: Message):
 # хэндлер для "Инстаграм"
 @router.message(Text(text=LEXICON_RU['button_inst']))
 async def process_button_inst_answer(message: Message):
-    await message.answer(text=LEXICON_RU['button_inst'],
+    await message.answer(text=LEXICON_RU['button_inst_info'],
                          reply_markup=inst_menu_kb)
 
 

@@ -52,7 +52,7 @@ comp_services_menu_builder.row(comp_services_brandbook_button,
                                comp_services_style_button,
                                comp_services_shooting_button,
                                comp_services_shooting_lb_button,
-                               back_button, width=1)
+                               back_button, width=2)
 # создаем клавиатуру
 comp_services_kb = comp_services_menu_builder.as_markup(resize_keyboard=True)
 
@@ -74,7 +74,7 @@ wildberries_menu_builder: ReplyKeyboardBuilder = ReplyKeyboardBuilder()
 wildberries_menu_builder.row(wildberries_infographics_button,
                              wildberries_copywriting_button,
                              wildberries_comp_services_shooting_button,
-                             back_button, width=1)
+                             back_button, width=2)
 
 wildberries_menu_kb = wildberries_menu_builder.as_markup(resize_keyboard=True)
 
@@ -98,7 +98,7 @@ inst_menu_kb_builder: ReplyKeyboardBuilder = ReplyKeyboardBuilder()
 inst_menu_kb_builder.row(inst_full_maintenance_button,
                          inst_content_shooting_button,
                          inst_visual_button, inst_reels_button,
-                         inst_graphics_button, back_button, width=1)
+                         inst_graphics_button, back_button, width=2)
 
 inst_menu_kb = inst_menu_kb_builder.as_markup(resize_keyboard=True)
 

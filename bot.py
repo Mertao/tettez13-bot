@@ -7,7 +7,6 @@ from handlers import user_handlers, other_handlers
 
 # конфигурируем и запускаем бота
 async def main():
-    # конфигурируем логгирование
 
     config: Config = load_config()
 
