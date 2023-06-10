@@ -1,8 +1,7 @@
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart, Text
-from keyboards.keyboards import (main_menu_kb, comp_services_kb,
-                                 wildberries_menu_kb, inst_menu_kb)
+from keyboards.keyboards import (main_menu_kb, comp_services_kb, inst_menu_kb)
 from lexicon.lexicon_ru import LEXICON_RU
 
 
@@ -82,24 +81,6 @@ async def process_comp_services_shooting_lb_button_answer(message: Message):
     await message.answer(text=LEXICON_RU['comp_services_shooting_lb_answer'])
 
 
-# хэндлер для "Вайлдберрис"
-@router.message(Text(text=LEXICON_RU['button_wb']))
-async def process_button_wb_answer(message: Message):
-    await message.answer(text=LEXICON_RU['button_wb_info'],
-                         reply_markup=wildberries_menu_kb)
-
-
-# хэндлер для "Инфографика"
-@router.message(Text(text=LEXICON_RU['wildberries_infographics_button']))
-async def process_wildberries_infographics_button_answer(message: Message):
-    await message.answer(text=LEXICON_RU['wildberries_infographics_answer'])
-
-
-# хэндлер для "Копирайтинг"
-@router.message(Text(text=LEXICON_RU['wildberries_copywriting_button']))
-async def process_wildberries_copywriting_button_answer(message: Message):
-    await message.answer(text=LEXICON_RU['wildberries_copywriting_answer'])
-
 
 # хэндлер для "Инстаграм"
 @router.message(Text(text=LEXICON_RU['button_inst']))
@@ -131,9 +112,3 @@ async def process_inst_visual_button_anwer(message: Message):
 async def process_inst_reels_button_answer(message: Message):
     await message.answer(text=LEXICON_RU['inst_reels_answer_one'])
     await message.answer(text=LEXICON_RU['inst_reels_answer_more'])
-
-
-# хэндлер для "Графика"
-@router.message(Text(text=LEXICON_RU['inst_graphics_button']))
-async def process_inst_graphics_button_answer(message: Message):
-    await message.answer(text=LEXICON_RU['inst_graphics_answer'])
